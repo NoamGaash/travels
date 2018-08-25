@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var noam = $(".noam");
 
 		var code = $("#code").val().split("\n");
-
+		
 		// remove spaces:
 		code = code.map(line => line.trim());
 
@@ -12,7 +12,9 @@ $(document).ready(function(){
 
 		// split each code line to words
 		code = code.map(line=>line.split(" "));
-
+		//code = code.map(line=>alert(line));
+       
+	   
 		code.forEach(function (command){
 			if(command[0] === "לך") {
 				if(command[2] === "ימינה"){
@@ -30,6 +32,13 @@ $(document).ready(function(){
 				} else if(command[2] === "למעלה"){
 					noam = noam.animate({
 						"top": "-=" + command[1] + "px"
+					}, 2000)
+				} 
+				else if(command[1] === "לעץ"){
+					noam = noam.animate({
+						"left": "+=520px"
+					}, 2000).noam = noam.animate({
+						"top": "+=280px"
 					}, 2000)
 				} 
 			} else if(command[0] === "תן") {
