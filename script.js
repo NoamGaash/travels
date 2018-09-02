@@ -3,11 +3,15 @@ $(document).ready(function(){
 	var arTree = $( ".tree" ).toArray();
 	var treeX = arTree[0].offsetLeft;
 	var treeY = arTree[0].offsetTop;
-	var noamWentX = 0;
-	var noamWentY = 0;
+	
+	
 
 	$("#run").click(function(){
 		var noam = $(".noam");
+		
+		var arNoam = $( ".noam" ).toArray();
+		var noamWentX = arNoam[0].offsetLeft;
+		var noamWentY = arNoam[0].offsetTop;
 
 		var code = $("#code").val().split("\n");
 		
