@@ -4,8 +4,6 @@ $(document).ready(function(){
 	var treeX = arTree[0].offsetLeft;
 	var treeY = arTree[0].offsetTop;
 	
-	
-
 	$("#run").click(function(){
 		var noam = $(".noam");
 		
@@ -23,8 +21,6 @@ $(document).ready(function(){
 
 		// split each code line to words
 		code = code.map(line=>line.split(" "));
-		//code = code.map(line=>alert(line));
-       
 	   
 		code.forEach(function (command){
 			if(command[0] === "לך") {
